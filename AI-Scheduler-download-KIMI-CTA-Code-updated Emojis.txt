@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Thank You | AI-Scheduler</title>
+  <title>Become a Launch Maniac Affiliate</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root{
@@ -59,10 +59,9 @@
   </header>
 
   <!-- ---- hero ---- -->
-  <section class="hero">
-    <div class="badge">AI-Scheduler Installed</div>
-    <h1>Thank You for Downloading the AI-Scheduler</h1>
-    <p>We Build Apps That Don’t Suck</p>
+  <section class="hero"
+    <h1>Become a Launch Maniac Affiliate</h1>
+    <div class="badge">Share The AI-Scheduler & Earn!</div>
   </section>
 
   <!-- ---- features ---- -->
@@ -82,11 +81,12 @@
   <!-- ---- future pacing ---- -->
   <section class="container">
     <div class="future">
-      <h2>Innovation Never Stops</h2>
-      <p>We're already building the next suite of apps that push the limits of what's possible inside GHL. Stay tuned—more game-changers dropping soon.</p>
-      <a href="REPLACE_WITH_YOUR_FORM_URL" class="btn">Join The Waitlist</a>
+      <h2>Perfect For</h2>
+      <p>Med Spas, Salons, Wellness Centers - Message, Chiro, Dental - any business tied to rooms, machines or stations.</p>
+      <a href="https://whitbeckrental-spec.github.io/ai-scheduler-download-form/" class="btn">Join Now</a>
     </div>
   </section>
 </body>
 </html>
+
 
