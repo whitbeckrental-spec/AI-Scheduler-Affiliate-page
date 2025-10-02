@@ -18,17 +18,17 @@
     *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
     body{background:var(--bg);color:var(--text);line-height:1.6;}
     a{text-decoration:none;color:inherit;}
-
+}
     /* --- nav --- */
     .navbar{position:fixed;top:0;left:0;right:0;background:var(--card);border-bottom:1px solid var(--border);z-index:1000;}
     .navInner{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;}
     .logo{font-size:1.25rem;font-weight:800;background:var(--logoGrad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
 
-    /* --- hero --- */
+    /* --- hero --- FIXED STRUCTURE --- */
     .hero{text-align:center;padding:120px 20px 70px;}
-    .badge{display:inline-block;background:var(--logoGrad);color:#fff;font-weight:700;padding:6px 14px;border-radius:999px;font-size:.75rem;margin-bottom:1.2rem;}
-    .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;margin-bottom:.5em;}
-    .hero p{font-size:1.25rem;color:var(--sub);}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;margin-bottom:.3em;}
+    .badge{display:inline-block;background:var(--logoGrad);color:#fff;font-weight:700;padding:8px 16px;border-radius:999px;font-size:.875rem;margin-bottom:0;}
+    .subtitle{font-size:1.25rem;color:var(--sub);margin-top:1rem;}
 
     /* --- features --- */
     .features{position:relative;padding:60px 20px;overflow:hidden;}
@@ -40,17 +40,47 @@
     .card h3{font-size:1.15rem;margin-bottom:.6rem;background:var(--logoGrad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
     .card p{color:var(--sub);font-size:.95rem;}
 
+  /* --- business types --- CLEAN BULLETS --- */
+    .business-list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+    .business-list li {
+        background: rgba(255,255,255,.05);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 12px 16px 12px 32px;
+        text-align: left;
+        font-size: .9rem;
+        position: relative;
+        transition: all .2s;
+    }
+    .business-list li::before {
+        content: "•";
+        position: absolute;
+        left: 12px;
+        color: #8A2BE2;
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+    .business-list li:hover {
+        background: rgba(138,43,226,.15);
+        border-color: #8A2BE2;
+        transform: translateY(-2px);
+    }
+
     /* --- future --- */
     .future{background:linear-gradient(90deg,#34d399,#10b981);color:#000;border-radius:12px;padding:50px 30px;text-align:center;margin-top:60px;}
     .future h2{font-size:1.7rem;margin-bottom:.6rem;}
-    .future p{font-size:1rem;opacity:.9;}
-  /* --- CTA button (purple→blue gradient) --- */
+    .future p{font-size:1rem;opacity:.9;margin-bottom:1.5rem;}
     .btn{background:var(--logoGrad);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;border:none;cursor:pointer;font-size:1rem;transition:opacity .25s;text-decoration:none;display:inline-block;}
     .btn:hover{opacity:.85;}
   </style>
-
 </head>
-<body>
+
   <!-- ---- nav ---- -->
   <header class="navbar">
     <div class="navInner">
@@ -58,8 +88,8 @@
     </div>
   </header>
 
-  <!-- ---- hero ---- -->
-  <section class="hero"
+  <!-- ---- hero ---- FIXED STRUCTURE ---- -->
+  <section class="hero">
     <h1>Become a Launch Maniac Affiliate</h1>
     <div class="badge">Share The AI-Scheduler & Earn!</div>
   </section>
@@ -69,7 +99,7 @@
     <div class="container">
       <div class="grid">
         <div class="card"><div class="emoji">🗓️</div><h3>One Calendar Per Service</h3><p>No more juggling device calendars. Create a calendar for each service and let the scheduler link rooms & equipment automatically.</p></div>
-        <div class="card"><div class="emoji">🚫</div><h3>No Double-Booking</h3><p>“Hold, then confirm” logic plus Quick-Block for cleaning windows keeps every resource conflict-free.</p></div>
+        <div class="card"><div class="emoji">🚫</div><h3>No Double-Booking</h3><p>"Hold, then confirm" logic plus Quick-Block for cleaning windows keeps every resource conflict-free.</p></div>
         <div class="card"><div class="emoji">📈</div><h3>Utilization Insights</h3><p>Spot peak times, busy rooms and bottlenecks at a glance so you can staff and price smarter.</p></div>
         <div class="card"><div class="emoji">✨</div><h3>Voice + Chat Booking</h3><p>Flip on Conversation AI or Voice AI and customers can book 24/7 using the same rules you already set.</p></div>
         <div class="card"><div class="emoji">🛡️</div><h3>Membership Guard</h3><p>Require an active subscription for premium services—booking pauses automatically if payment lapses.</p></div>
@@ -78,15 +108,30 @@
     </div>
   </section>
 
+ <!-- ---- business types ---- CLEANEST BULLET VERSION ---- -->
+<section class="container">
+    <div class="business-types">
+        <h3>Perfect For These Businesses</h3>
+        <ul class="business-list">
+            <li>Med Spas</li>
+            <li>Salons</li>
+            <li>Wellness Centers</li>
+            <li>Massage Therapy</li>
+            <li>Chiropractic</li>
+            <li>Dental Practices</li>
+            <li>Any business with rooms, machines or stations</li>
+        </ul>
+    </div>
+</section>
+
   <!-- ---- future pacing ---- -->
   <section class="container">
     <div class="future">
-      <h2>Perfect For</h2>
-      <p>Med Spas, Salons, Wellness Centers - Message, Chiro, Dental - any business tied to rooms, machines or stations.</p>
+      <h2>Ready to Partner With Us?</h2>
+      <p>Join hundreds of affiliates earning recurring revenue with the AI-Scheduler.</p>
       <a href="https://whitbeckrental-spec.github.io/ai-scheduler-download-form/" class="btn">Join Now</a>
     </div>
   </section>
+
 </body>
 </html>
-
-
